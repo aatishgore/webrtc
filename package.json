@@ -1,0 +1,24 @@
+{
+  "name": "sample1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "signal": "signalhub listen -p 8081",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faye": "^1.2.4",
+    "pubsub-js": "^1.7.0",
+    "signalhub": "^4.9.0",
+    "simple-peer": "^9.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
