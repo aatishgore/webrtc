@@ -41,12 +41,12 @@ function gotMedia(stream) {
   });
 
   peer.on('stream',function(stream1){
-    let video = document.getElementById('video');
+    //let video = document.getElementById('video');
+    var video = document.createElement('video');
     console.log(video);
     video.srcObject = stream1; 
-    
-    
     video.play();
+    document.getElementById("video").appendChild(video);
   })
 }
 
