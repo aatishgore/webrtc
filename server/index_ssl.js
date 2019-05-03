@@ -11,4 +11,4 @@ var server = https.createServer(options),
     bayeux = new faye.NodeAdapter({mount: '/'});
 
 bayeux.attach(server);
-server.listen(8084);
+server.listen(8095);
