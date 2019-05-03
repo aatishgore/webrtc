@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WebRTC</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
-  <label>WebRTC</label><br/>
-  <div id="video" >
-    <video id="video1"></video>
+  <div class="container">
+    <div class="row">
+      <label>WebRTC</label>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <label>Your Video</label>
+      </div>
+      <div class="col-sm-6">
+        <label>Partner Video</label>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+      <video id="yourvideo"></video>
+
+        </div>
+
+      <div class="col-sm-6">
+        <video id="partnervideo"></video>
+      </div>
+    </div>
   </div>
+
+  </div>
+
   <script src="dist/bundle.js"></script>
 </body>
+
 </html>

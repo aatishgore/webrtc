@@ -3,8 +3,9 @@ const Faye = require('faye');
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 const userId = Math.random();
 var client = new Faye.Client('https://gmat.php-dev.in:8095/');
+var client = new Faye.Client('http://localhost:8000/');
 var constraints = { audio: true, video: true };
-var video = document.querySelector("video");
+var yourvideo = document.getElementById("yourvideo");
 const key = "/" + window.location.search.split('=')[1];
 let initiator = location.hash === '#init';
 let webRTCData = null;
@@ -51,15 +52,14 @@ function gotMedia(stream) {
   });
 
   peer.on('stream', function (stream1) {
-    let video = document.getElementById('video1');
-    //var video = document.createElement('video');
+    let video = document.getElementById('partnervideo');
     console.log(video);
     video.srcObject = stream1;
     video.play();
-    //document.getElementById("video").appendChild(video);
 
 
   });
+  yourvideo.srcObject = stream;
 }
 
 
