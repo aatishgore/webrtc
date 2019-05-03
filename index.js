@@ -3,7 +3,7 @@ const Faye = require('faye');
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 const userId = Math.random();
 var client = new Faye.Client('https://gmat.php-dev.in:8095/');
-var client = new Faye.Client('http://localhost:8000/');
+// var client = new Faye.Client('http://localhost:8000/');
 var constraints = { audio: true, video: true };
 var yourvideo = document.getElementById("yourvideo");
 const key = "/" + window.location.search.split('=')[1];
