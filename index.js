@@ -35,7 +35,7 @@ function gotMedia(stream) {
   console.log("abcs");
   peer.on('signal', function (data) {
     console.log("webRTC data");
-    console.log(webRTCData)
+    console.log(data)
     webRTCData = data;
     client.publish(key, {
       partnerId: webRTCData,
