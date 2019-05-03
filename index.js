@@ -2,7 +2,7 @@ const Peer = require('simple-peer');
 const Faye = require('faye');
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 const userId = Math.random();
-var client = new Faye.Client('http://gmat.php-dev.in:8095/');
+var client = new Faye.Client('https://gmat.php-dev.in:8095/');
 var constraints = { audio: true, video: true };
 var video = document.querySelector("video");
 const key = "/" + window.location.search.split('=')[1];
