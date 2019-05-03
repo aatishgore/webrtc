@@ -19,6 +19,18 @@ function gotMedia(stream) {
     initiator: initiator,
     trickle: false,
     stream: stream,
+    iceTransportPolicy: 'relay',
+    config: {
+
+      iceServers: [
+        { url: 'stun:stunserver.org' },
+        {
+          url: 'turn:numb.viagenie.ca',
+          credential: 'muazkh',
+          username: 'webrtc@live.com'
+        },
+      ]
+    }
   });
   console.log("abcs");
   peer.on('signal', function (data) {
